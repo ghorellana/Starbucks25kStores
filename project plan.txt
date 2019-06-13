@@ -1,0 +1,31 @@
+performance metrics
+loyalty program-buying history
+inventory analysis
+reorder point
+advanced reporting
+KPI: margins, foot traffic, walk-in rate, sales growth, best sellers,
+
+
+https://www.kaggle.com/starbucks/store-locations
+
+http://www.e-importz.com/coffee-statistics.php
+
+https://www.kaggle.com/sbajew/exploring-coffee-production-and-consumption
+
+https://www.statista.com/statistics/250091/coffee-drinking-consumers-in-the-us-by-age-group-2010/
+https://www.statista.com/statistics/277137/world-coffee-production-by-leading-countries/
+https://www.statista.com/statistics/194261/us-coffee-imports-by-top-10-countries-of-origin-2009/
+
+
+why so many coffee shops?
+
+more coffee consumption --> more coffee shops
+more cold whether --> more coffee shops??
+
+stores by city, state...country
+price change by coffee type
+consumption by age group
+producing countries chart
+USA imports
+# ownership type in usa, world
+
