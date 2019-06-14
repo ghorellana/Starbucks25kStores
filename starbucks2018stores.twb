@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0417.1429                               -->
+<workbook original-version='18.1' source-build='2019.1.3 (20191.19.0417.1429)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Data (locationsworldwide)' inline='true' name='federated.0wgi0cm1y7z4wt18k778g0k1hkzw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='locationsworldwide' name='excel-direct.0s0lprb0npce3j1c64q590dxe2yn'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/GBTC406007ur/Documents/Gonzalo/locationsworldwide.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0s0lprb0npce3j1c64q590dxe2yn' name='Data' table='[Data$]' type='table'>
+          <columns gridOrigin='A1:B17:no:A1:B17:0' header='yes' outcome='2'>
+            <column datatype='string' name='Starbucks stores worldwide By Year' ordinal='0' />
+            <column datatype='integer' name='Number of stores' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Starbucks stores worldwide By Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Starbucks stores worldwide By Year]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>Starbucks stores worldwide By Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of stores</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of stores]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>Number of stores</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Data]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B17:no:A1:B17:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.487406' measure-ordering='alphabetic' measure-percentage='0.512594' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Starbucks Stores from 2003 to 2018</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data (locationsworldwide)' name='federated.0wgi0cm1y7z4wt18k778g0k1hkzw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0wgi0cm1y7z4wt18k778g0k1hkzw'>
+            <column datatype='integer' name='[Number of stores]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Starbucks stores worldwide By Year]' role='dimension' type='nominal' />
+            <column-instance column='[Starbucks stores worldwide By Year]' derivation='None' name='[none:Starbucks stores worldwide By Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of stores]' derivation='Sum' name='[sum:Number of stores:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0wgi0cm1y7z4wt18k778g0k1hkzw].[none:Starbucks stores worldwide By Year:nk]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0wgi0cm1y7z4wt18k778g0k1hkzw].[sum:Number of stores:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d0e7d0</color>
+                <color>#b1deb1</color>
+                <color>#95d595</color>
+                <color>#7acb7a</color>
+                <color>#61c261</color>
+                <color>#4ab94a</color>
+                <color>#34af34</color>
+                <color>#21a621</color>
+                <color>#0f9d0f</color>
+                <color>#009400</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0wgi0cm1y7z4wt18k778g0k1hkzw].[sum:Number of stores:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0wgi0cm1y7z4wt18k778g0k1hkzw].[sum:Number of stores:qk]</rows>
+        <cols>[federated.0wgi0cm1y7z4wt18k778g0k1hkzw].[none:Starbucks stores worldwide By Year:nk]</cols>
+      </table>
+      <simple-id uuid='{55BB9ACA-33C2-48B8-B163-0BF66F18387C}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0wgi0cm1y7z4wt18k778g0k1hkzw].[sum:Number of stores:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0wgi0cm1y7z4wt18k778g0k1hkzw].[none:Starbucks stores worldwide By Year:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F13EE346-D764-4515-B732-0C5E1531EDBB}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
